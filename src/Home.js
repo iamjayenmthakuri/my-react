@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Home = () => {
+  const [hame, setHame] = useState("jayen");
   const handleClickAgain = (name) => {
     console.log("hello" + name);
   };
 
-  const handleClick = (e) => {
-    console.log("Hello, hinjas", e.target);
+  const handleClick = () => {
+    setHame("Lihada");
+    console.log(hame);
   };
   return (
     <div>
       <h2>HomePage</h2>
+      <p>{hame}</p>
       <button onClick={handleClick}>clickMe</button>
       <button
         onClick={(e) => {
